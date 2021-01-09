@@ -7,9 +7,9 @@ A template project for community members to clone and setup their project, this 
 2. Remove this and the above section
 3. Update the following sections with your project info
 
-# Project Name 
+# Todo List 
 
-Detailed project description here
+A Todo List App that allows you to add and manage your daily tasks so you can stay on top of your work and be more productive than ever.
 
 ## Setup/Usage Guide 
 
@@ -17,18 +17,15 @@ How to setup the repo in the local machine
 
 ## Tech Stack
 
-List down all the tech used
+This project uses the MERN Stack
 
-> This will let other people contribute
+> React
+> NodeJs, Express
+> Mongo DB
 
 ## Want to Contribute?
 
-List down where you need help 
-
-1. Item 1
-2. Item 2
-
-Find something that's not on the list create an issue with `I want to help` template
+Simply join the slack channel here: https://build2learn.slack.com/archives/C01J4T3PDM4 
 
 
 
