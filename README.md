@@ -10,9 +10,7 @@ How to setup the repo in the local machine
 
 This project uses the MERN Stack
 
-> React
-> NodeJS, Express
-> Mongo DB
+> React, NodeJS, Express, Mongo DB
 
 ## Want to Contribute?
 
