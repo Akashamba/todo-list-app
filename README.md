@@ -6,7 +6,9 @@ A Todo List App that allows you to add and manage your daily tasks so you can st
  * Login and Sign up
  * Add a task
  * Mark a task as completed
+ * Delete a task
  * View all tasks
+ * Statistics
 
 ## Setup/Usage Guide 
 
