@@ -4,7 +4,8 @@ A Todo List App that allows you to add and manage your daily tasks so you can st
 
 ## Setup/Usage Guide 
 
-How to setup the repo in the local machine
+ ### Frontend
+ cd frontend && npm start
 
 ## Tech Stack
 
