@@ -2,15 +2,27 @@
 
 A Todo List App that allows you to add and manage your daily tasks so you can stay on top of your work and be more productive than ever.
 
+## List of features
+ * Login and Sign up
+ * Add a task
+ * Mark a task as completed
+ * Delete a task
+ * View all tasks
+ * Statistics
+
 ## Setup/Usage Guide 
 
-How to setup the repo in the local machine
+ ### Frontend
+ ```cd frontend && npm start```
 
 ## Tech Stack
 
 This project uses the MERN Stack
 
-> React, NodeJS, Express, Mongo DB
+ * React
+ * NodeJS
+ * Express
+ * Mongo DB
 
 ## Want to Contribute?
 
