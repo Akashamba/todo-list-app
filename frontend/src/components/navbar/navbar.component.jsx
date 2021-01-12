@@ -29,7 +29,7 @@ function Navbar(props) {
 
     return(
         <AppBar position="static">
-            <Link id="navbar-brand" to='/view-tasks'>Todo List</Link>
+            <Link onClick={() => setTab(1)} id="navbar-brand" to='/view-tasks'>Todo List</Link>
             <Tabs varianr="fullwidth" value={tab}>
                 <Tab id="tabs" onClick={() => handleClick(0)} label="Add Task"/>
                 <Tab id="tabs" onClick={() => handleClick(1)} label="View Tasks"/>
