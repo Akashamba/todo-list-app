@@ -1,0 +1,29 @@
+.container {
+    height: 100%;
+}
+
+.card {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+    /* background: #FFFAFA; */
+    padding: 10px 15px 20px 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(85, 85, 85, 0.3);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+#form {
+    display: grid;
+    align-items: center;
+}
+
+.MuiFormControl-root  {
+    width: 100%;
+}
+
+#priority-helper {
+    color: rgba(0, 0, 0, 0.54);
+    /* text-align: center; */
+    font-size: 0.85rem;
+}
