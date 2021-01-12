@@ -1,0 +1,11 @@
+#navbar-brand {
+    color: #fff!important;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 2rem;
+    padding: 10px 20px;
+}
+
+#tabs {
+    margin: 0 auto;
+}
