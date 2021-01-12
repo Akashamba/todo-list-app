@@ -19,7 +19,7 @@ function App(props) {
             <Route exact path='/'>
                 <Redirect to='/view-tasks'/>
             </Route>
-                <SwipeableRoutes onChangeIndex={index => setTab(index)}>
+                <SwipeableRoutes replace onChangeIndex={index => setTab(index)}>
                     <Route exact path='/add-task' component={AddTask} />
                     <Route exact path='/view-tasks' component={ViewTasks} />
                     <Route exact path='/settings' component={SettingsPage} />
