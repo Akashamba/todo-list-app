@@ -9,8 +9,12 @@ A Todo List App that allows you to add and manage your daily tasks so you can st
  * Delete a task
  * View all tasks
  * Statistics
+ 
+## Known Issues
+ * Reminder datetime not available on firefox.
 
 ## Setup/Usage Guide 
+```nodejs``` is required to use ```npm```
 
  ### Frontend
  ```cd frontend && npm start```
