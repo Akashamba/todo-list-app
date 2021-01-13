@@ -1,6 +1,7 @@
 import 'date-fns';
 import React, {useState} from 'react';
-import {Container, TextField, Button, Slider, Typography, Grid} from '@material-ui/core';
+import {Container, TextField, Button, Slider, Typography,
+        FormControl, Grid} from '@material-ui/core';
 // import {
 //     MuiPickersUtilsProvider,
 //     KeyboardTimePicker,
@@ -23,10 +24,11 @@ export default function AddTask() {
             description: description,
             date: date,
             time: time,
-            priority: priority
+            priority: priority, 
+            createdDate: new Date(),
         }
         console.log(form);
-        setDate();setTime();
+        
     }
 
     return(
@@ -37,21 +39,23 @@ export default function AddTask() {
 
                     <TextField name="task" label="Task" value={task} autoComplete="false" required 
                             onChange={event => setTask(event.target.value)} />
-                    <br/><br/>
+                    
                     <TextField name="description" label="Description" value={description} autoComplete="false" 
                             onChange={event => setDescription(event.target.value)} helperText="An optional description of your task" />
-                    <br/><br/>
-                    <Grid container>
-                        <Grid item xs={11}>
-                            <Typography>Priority</Typography>
+                    
+                    <FormControl>
+                        <Grid container>
+                            <Grid item xs={11}>
+                                <Typography>Priority</Typography>
+                            </Grid>
+                            <Grid item xs={1}>
+                                <Typography>{priority}</Typography>
+                            </Grid>
                         </Grid>
-                        <Grid item xs={1}>
-                            <Typography>{priority}</Typography>
-                        </Grid>
-                    </Grid>
-                    <Slider value={priority} onChange={(e, value) => setPriority(value)} 
-                            min={0} max={5} />
-                    <Typography id="priority-helper">Highest Priority: 5</Typography>
+                        <Slider value={priority} onChange={(e, value) => setPriority(value)} 
+                        min={0} max={5} />
+                        <Typography id="priority-helper">Highest Priority: 5</Typography>
+                    </FormControl>
                     {/*<br/><br/>
                     <MuiPickersUtilsProvider utils={DateFnsUtils}>
                         <KeyboardTimePicker margin="normal" id="time-picker" label="Time picker"
@@ -61,7 +65,7 @@ export default function AddTask() {
                                             }}
                             />
                                         </MuiPickersUtilsProvider>*/}
-                    <br/><br/><br/>
+                    <br/>
                     <Button fullWidth variant="outlined" color="primary" type="submit">Add Task</Button>
                 </form>
             </div>
