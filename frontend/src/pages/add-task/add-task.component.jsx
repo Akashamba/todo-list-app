@@ -1,4 +1,4 @@
-import 'date-fns';
+// import 'date-fns';
 import React, {useState} from 'react';
 import {Container, TextField, Button, Slider, Typography,
         FormControl, Grid} from '@material-ui/core';
@@ -13,8 +13,7 @@ import './add-task.styles.css';
 export default function AddTask() {
     const [task, setTask] = useState('');
     const [description, setDescription] = useState('');
-    const [date, setDate] = useState('');
-    const [time, setTime] = useState('');
+    const [reminder, setReminder] = useState('');
     const [priority, setPriority] = useState(1);
 
     const handleSubmit = (event) => {
@@ -22,8 +21,7 @@ export default function AddTask() {
         const form = {
             task: task,
             description: description,
-            date: date,
-            time: time,
+            reminder: reminder,
             priority: priority, 
             createdDate: new Date(),
         }
@@ -56,15 +54,7 @@ export default function AddTask() {
                         min={0} max={5} />
                         <Typography id="priority-helper">Highest Priority: 5</Typography>
                     </FormControl>
-                    {/*<br/><br/>
-                    <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                        <KeyboardTimePicker margin="normal" id="time-picker" label="Time picker"
-                                            value={time} onChange={time => setTime(time)} 
-                                            KeyboardButtonProps={{
-                                                'aria-label': 'change time',
-                                            }}
-                            />
-                                        </MuiPickersUtilsProvider>*/}
+                    <TextField type="datetime-local" value={reminder} onChange={event => setReminder(event.target.value)} />
                     <br/>
                     <Button fullWidth variant="outlined" color="primary" type="submit">Add Task</Button>
                 </form>
