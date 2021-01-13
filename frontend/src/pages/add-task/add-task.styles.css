@@ -27,3 +27,11 @@
     /* text-align: center; */
     font-size: 0.85rem;
 }
+
+#datetime {
+    margin: 0;
+}
+
+#datetime-label, #priority-label {
+    color: rgba(0, 0, 0, 0.54);
+}

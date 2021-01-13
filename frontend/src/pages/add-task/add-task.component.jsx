@@ -1,13 +1,6 @@
-// import 'date-fns';
 import React, {useState} from 'react';
 import {Container, TextField, Button, Slider, Typography,
-        FormControl, Grid} from '@material-ui/core';
-// import {
-//     MuiPickersUtilsProvider,
-//     KeyboardTimePicker,
-//     KeyboardDatePicker,
-//   } from '@material-ui/pickers';
-// import DateFnsUtils from '@date-io/date-fns';
+        FormControl, Grid, Input} from '@material-ui/core';
 import './add-task.styles.css';
 
 export default function AddTask() {
@@ -26,7 +19,10 @@ export default function AddTask() {
             createdDate: new Date(),
         }
         console.log(form);
-        
+        setTask('');
+        setDescription('');
+        setReminder('');
+        setPriority(1);
     }
 
     return(
@@ -44,7 +40,7 @@ export default function AddTask() {
                     <FormControl>
                         <Grid container>
                             <Grid item xs={11}>
-                                <Typography>Priority</Typography>
+                                <Typography id="priority-label">Priority</Typography>
                             </Grid>
                             <Grid item xs={1}>
                                 <Typography>{priority}</Typography>
@@ -54,7 +50,10 @@ export default function AddTask() {
                         min={0} max={5} />
                         <Typography id="priority-helper">Highest Priority: 5</Typography>
                     </FormControl>
-                    <TextField type="datetime-local" value={reminder} onChange={event => setReminder(event.target.value)} />
+                    <FormControl>
+                        <label id="datetime-label" for="datetime">Reminder</label>
+                        <TextField id="datetime" type="datetime-local" value={reminder} onChange={event => setReminder(event.target.value)} />
+                    </FormControl>
                     <br/>
                     <Button fullWidth variant="outlined" color="primary" type="submit">Add Task</Button>
                 </form>
