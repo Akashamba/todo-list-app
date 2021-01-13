@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import {Container, TextField, Button, Slider, Typography,
         FormControl, Grid} from '@material-ui/core';
+import DateTimePicker from 'react-datetime-picker'
 import './add-task.styles.css';
 
 export default function AddTask() {
     const [task, setTask] = useState('');
     const [description, setDescription] = useState('');
-    const [reminder, setReminder] = useState('');
+    const [reminder, setReminder] = useState(new Date());
     const [priority, setPriority] = useState(1);
 
     const handleSubmit = (event) => {
@@ -50,9 +51,9 @@ export default function AddTask() {
                         min={0} max={5} />
                         <Typography id="priority-helper">Highest Priority: 5</Typography>
                     </FormControl>
-                    <FormControl>
-                        <label id="datetime-label" for="datetime">Reminder</label>
-                        <TextField id="datetime" type="datetime-local" value={reminder} onChange={event => setReminder(event.target.value)} />
+                    <FormControl variant="standard">
+                        <label id="datetime-label" htmlFor="datetime">Reminder</label>
+                        <DateTimePicker format="dd-MM-y h:mm a" minDate={new Date()} value={reminder} onChange={value => setReminder(value)} />
                     </FormControl>
                     
                     <Button fullWidth variant="outlined" color="primary" type="submit">Add Task</Button>
