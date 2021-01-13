@@ -5,7 +5,8 @@ import ViewTasks from './pages/view-tasks/view-tasks.component.jsx';
 import SettingsPage from './pages/settings-page/settings-page.component.jsx';
 import Navbar from './components/navbar/navbar.component.jsx';
 import {Route, Redirect, withRouter} from 'react-router-dom';
-import SwipeableRoutes from "react-swipeable-routes"
+import SwipeableRoutes from "react-swipeable-routes";
+import {Helmet} from "react-helmet";
 
 function App(props) {
 
@@ -15,6 +16,11 @@ function App(props) {
 
     return (
         <div className="App">
+            <Helmet>
+                {tab===0?<title>Add Task - Todo List App</title>:''}
+                {tab===1?<title>View Tasks - Todo List App</title>:''}
+                {tab===2?<title>Settings - Todo List App</title>:''}
+            </Helmet>
             <Navbar tab={tab} setTab={setTab} />
             <Route exact path='/'>
                 <Redirect to='/view-tasks'/>
