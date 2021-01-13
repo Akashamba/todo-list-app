@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Container, TextField, Button, Slider, Typography,
-        FormControl, Grid, Input} from '@material-ui/core';
+        FormControl, Grid} from '@material-ui/core';
 import './add-task.styles.css';
 
 export default function AddTask() {
