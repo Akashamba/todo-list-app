@@ -54,7 +54,7 @@ export default function AddTask() {
                         <label id="datetime-label" for="datetime">Reminder</label>
                         <TextField id="datetime" type="datetime-local" value={reminder} onChange={event => setReminder(event.target.value)} />
                     </FormControl>
-                    <br/>
+                    
                     <Button fullWidth variant="outlined" color="primary" type="submit">Add Task</Button>
                 </form>
             </div>
